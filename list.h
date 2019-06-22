@@ -217,6 +217,10 @@ struct list {
         return ret;
     }
 
+    void pop_front() {
+        erase(begin());
+    }
+
     void splice(const_iterator pos, list<T> &other, const_iterator begin, const_iterator end) {
         node_base *left = begin.it->prev;
 
